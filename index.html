@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>camo</title>
+    </head>
+    <body>
+        <h1>camo.js</h1>
+        <script type='text/javascript' src='./dst/camo.js'></script>
+        <script type="text/javascript">
+            if (typeof Camo === 'undefined') {
+                console.info('Couldn\'t find Camo, have you ran `npm start`?'); // TODO: Remove this comment.
+            } else {
+                var MASK = '([0-8][0-9])-[0-9][0-9]-[0-9][0-9]'
+                var res;
+                console.debug('testing camo...'); // TODO: Remove this comment.
+                res = Camo.mask({ re: MASK, input: '(' });
+                console.debug('res: ', res);
+                res = Camo.mask({ re: MASK, input: '(79' });
+                console.debug('res: ', res);
+                res = Camo.mask({ re: MASK, input: '(79' });
+                console.debug('res: ', res);
+            }
+        </script>
+    </body>
+</html>
